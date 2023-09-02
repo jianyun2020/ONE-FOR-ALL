@@ -2,9 +2,9 @@ import React from "react";
 import {BrowserRouter as Router,Link, Switch, Route} from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
-import Topics from "../2_NestedRouting/Topics";
+import Topics from "./Topics";
 
-const NestedRouting = () => {
+const BasisRouting = () => {
 
     return (
         <Router>
@@ -14,7 +14,7 @@ const NestedRouting = () => {
                         <Link to={"/"}>Home</Link>
                     </li>
                     <li>
-                        <Link to={"/topics"}>Topics</Link>
+                        <Link to={"/user"}>User</Link>
                     </li>
                     <li>
                         <Link to={"/about"}>About</Link>
@@ -27,7 +27,7 @@ const NestedRouting = () => {
                     <About />
                 </Route>
 
-                <Route path={"/topics"}>
+                <Route path={"/user"}>
                     <Topics />
                 </Route>
 
@@ -39,4 +39,4 @@ const NestedRouting = () => {
     )
 }
 
-export default NestedRouting
+export default BasisRouting
